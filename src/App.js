@@ -1,13 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import Home from './components/Home/Home';
-import Movies from './components/Movies/Movies';
-import Series from './components/Series/Series';
+import Navbar from './components/Navbar/Navbar';
+import Routes from './components/Routes/Routes';
 
 function App() {
   return (
     <div className="App">
-    <Home />
+     <Navbar />
+     <Routes />
     </div>
   );
 }

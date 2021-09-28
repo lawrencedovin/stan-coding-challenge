@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Home.module.scss';
-import Header from '../Header/Header';
 import placeholder from '../../assets/placeholder.png';
 
 const Home = () => (
   <div className={styles.Home} data-testid="Home">
-    <Header/ >
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col-sm">

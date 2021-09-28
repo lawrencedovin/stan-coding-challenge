@@ -1,14 +1,14 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import Header from './Header';
+import Routes from './Routes';
 
-describe('<Header />', () => {
+describe('<Routes />', () => {
   test('it should mount', () => {
-    render(<Header />);
+    render(<Routes />);
     
-    const header = screen.getByTestId('Header');
+    const routes = screen.getByTestId('Routes');
 
-    expect(header).toBeInTheDocument();
+    expect(routes).toBeInTheDocument();
   });
 });
