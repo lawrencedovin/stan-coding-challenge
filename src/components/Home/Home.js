@@ -8,7 +8,7 @@ const Home = () => (
   <div className={styles.Home} data-testid="Home">
     <Header/ >
     <div class="container">
-      <div class="row">
+      <div class="row justify-content-md-center">
         <div class="col-sm">
           <div className={styles.card}>
             <img class="card-img-top" src={placeholder} alt="Card image cap" />
