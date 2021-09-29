@@ -11,11 +11,12 @@ function Series() {
     :
     null
   ))
+  // Order by item.title in series
   return (
     <div className={styles.Series} data-testid="Series">
       <div class="container">
         <div class="row justify-content-md-center">
-          {series.map((item, i) => (
+          {series.slice(0, 21).map((item, i) => (
             <div className={styles.card}>
               <img class="card-img-top" src={item.images["Poster Art"].url} alt="Series Card" />
               <p>{item.title}</p>
