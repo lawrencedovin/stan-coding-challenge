@@ -5,36 +5,37 @@ import data from "../../feed/sample.json";
 function Series() {
   let series = []
   let seriesTitle = [];
+  
+  // Extracts item titles to array
   data.entries.map((item) => (
     item.releaseYear >= 2010 && item.programType === 'series'
     ?
-    // series.push(item)
     seriesTitle.push(item.title)
     :
     null
   ))
+
+  // Sorts series titles and limits it to 21
   seriesTitle = seriesTitle.sort().slice(0, 21);
-  data.entries.map((item) => (
-    seriesTitle.includes(item.title)
-    ?
-    series.push(item)
-    :
-    null 
-  ))
-  // Extract
-  // Order by item.title in series
+
+  // Loops through seriesTitle in order if the seriesTitle matches in json data then pushes it to series array.
+  for(let i = 0; i < seriesTitle.length; i++) {
+    data.entries.map((item) => (
+      item.title === seriesTitle[i] ? series.push(item) : null
+    ))
+  }
+
   return (
     <div className={styles.Series} data-testid="Series">
       <div class="container">
         <div class="row justify-content-md-center">
-          {series.slice(0, 21).map((item, i) => (
+          {series.map((item, i) => (
             <div className={styles.card}>
               <img class="card-img-top" src={item.images["Poster Art"].url} alt="Series Card" />
               <p>{item.title}</p>
             </div>
           ))}
         </div>
-        {/* <div>{seriesTitle.map((title) => title)}</div> */}
       </div>
     </div>
   )
