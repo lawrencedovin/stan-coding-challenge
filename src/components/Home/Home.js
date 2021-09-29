@@ -24,7 +24,7 @@ const Home = () => (
             <p class="card-text">Check out some of our Movies!</p>
           </div>
           <div class="card-body">
-            <a href="series" class="card-link">Check Movies</a>
+            <a href="/movies" class="card-link">Check Movies</a>
           </div>
         </div>
       </div>
