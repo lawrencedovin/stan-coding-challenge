@@ -70,7 +70,7 @@ function Series() {
             </div>
         </div>
         : 
-        <PacmanLoader color={"#FEE638"} css={override}/>
+        <PacmanLoader color={"#FEE638"} css={override} size={50}/>
       }
       </>
   )
